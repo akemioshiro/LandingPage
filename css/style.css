@@ -1,0 +1,151 @@
+﻿* {
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+header {
+    height: 120px;
+    width: 100%;
+    background-color: #04506c;
+    color: #fff;
+    display: flex; /*alinhar elementos na tela*/
+    align-items: center; /*alinhar na vertical*/
+    justify-content: center; /*alinhar na horizontal*/
+    position: fixed; /*topo ficar sempre fixo*/
+    font-size: 1em;
+    z-index: 1;
+    transition: all .3s; /*animação, efeito de diminuicao do topo*/
+}
+
+.header_fixed {
+    font-size: 0.7em;
+    height: 60px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0px 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+main {
+    padding-top: 120px; /*por causa da altura do topo*/
+}
+
+.section-info {
+    padding: 60px 60px; /*conteudo nao colar nas bordas*/ 
+}
+
+h2.header { /*classe header do h2*/
+    font-size: 1.8em;
+    color: #494949;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.parallax-container { /*classe da imagem*/
+    position: relative;
+    overflow: hidden; /*para as imagens nao ultrapassar paginas*/
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.parallax img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: translateX(-50%);
+}
+
+footer {
+    background-color: #04506c;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 2; /*acima do topo*/
+}
+
+nav .menu {
+    background-color: #3d71ac;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer; /*sepre clicavel*/
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    width: 50px;
+}
+
+.nav-itens {
+    position: absolute;
+    top: -210px; /*acima do botao com o "+"*/
+    right: 6px;
+    opacity: 0; /*ficar oculto*/
+    transition: all 0.3s;
+}
+
+.nav-itens a {
+    display: block;
+    margin: 10px 0;
+    color: #fff;
+    background-color: #3d71ac;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.nav-show {
+    opacity: 1; /*visivel na tela*/
+}
+
+.text_tooltip {
+    background-color: rgb(90, 88, 88);
+    width: 200px;
+    text-decoration: none;
+    padding: 0px 5px;
+    position: absolute;
+    right: 60px;
+    height: 25px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+/*inserir elemento apos elemento principal, a setinha*/
+.text_tooltip:after {
+    content: "";
+    border-top: 0px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(90,88,88);
+    position: absolute;
+    right: -10px;
+    top: 0px;
+}
